@@ -1,1 +1,67 @@
 This folder contains assignments related to asynchronous JavaScript
+
+// Api
+// Excahange rate:
+// Countries:
+
+// 1st function- getExchangeRate
+// 2nd
+// 3rd
+
+// call convert currency to get meanigful data
+
+// setTimeout(() => {
+//   console.log('This runs after 1000 milliseconds.');
+// }, 1000);
+
+// // Promises in action
+// const promiseFunction = new Promise((resolve, reject) => {
+//   const add = (a, b) => a + b;
+//   resolve(add(2, 3));
+// });
+
+// promiseFunction
+//   .then((response) => {
+//     console.log(response);
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
+
+// // Async / Await
+// const asyncGreeting = async () => 'Greetings' ;
+
+// // Promise
+// const promiseGreeting = () => new Promise(((resolve) => {
+//   resolve('Greetings');
+// }));
+
+// asyncGreeting().then(result => console.log(result));
+// promiseGreeting().then(result => console.log(result));
+
+// function to simulate an asynchronous increment
+function incrementAsync(counter) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(counter + 1);
+    }, 1000);
+  });
+}
+
+// Asynch function to increment the counter multiple times
+async function runAsyncCounter() {
+  let counter = 0;
+
+  // increment the counter asynchronosly three times
+
+  for (let i = 0; i < 3; i++) {
+    conter = await incrementAsync(counter);
+    console.log("counter:", counter);
+  }
+
+  console.log("Asynch counter finished.");
+}
+
+// Run the async counter function
+
+runAsyncCounter();
